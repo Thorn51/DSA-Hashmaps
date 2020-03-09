@@ -1,0 +1,19 @@
+{
+  "name": "06_dsa_hashmaps",
+  "version": "1.0.0",
+  "description": "Exercises completed in the Thinkful Data Structures and Algorithms module on hash maps. ",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorn51/DSA-Hashmaps.git"
+  },
+  "author": "Matt Thornberry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thorn51/DSA-Hashmaps/issues"
+  },
+  "homepage": "https://github.com/Thorn51/DSA-Hashmaps#readme"
+}
