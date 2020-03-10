@@ -26,6 +26,25 @@ class HashMap {
     };
   }
 
+  get(key) {
+    const index = this._findSlot(key);
+    if (this._hashTable[index] === undefined) {
+      throw new Error("Key error");
+    }
+    return this._hashTable[index].value;
+  }
+
+  delete(key) {
+    const index = this._findSlot(key);
+    const slot = this._hashTable[index];
+    if (slot === undefined) {
+      throw new Error("Key error");
+    }
+    slot.DELETED = true;
+    this.length--;
+    this._deleted++;
+  }
+
   _findSlot(key) {
     const hash = HashMap._hashString(key);
     const start = hash % this._capacity;
@@ -55,20 +74,9 @@ class HashMap {
     }
   }
 
-  delete(key) {
-    const index = this._findSlot(key);
-    const slot = this._hashTable[index];
-    if (slot === undefined) {
-      throw new Error("Key error");
-    }
-    slot.DELETED = true;
-    this.length--;
-    this._deleted++;
-  }
-
   static _hashString(string) {
     let hash = 5381;
-    for (let i = 0; i < string.length; I++) {
+    for (let i = 0; i < string.length; i++) {
       hash = (hash << 5) + hash + string.charCodeAt(i);
       hash = hash & hash;
     }
