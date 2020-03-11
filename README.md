@@ -17,7 +17,7 @@ Introduction module on data structures and algorithms including:
 
 ### Exercises
 
-## 1. Create a HashMap class
+#### 1. Create a HashMap class
 
 Walk through the HashMap implementation in the curriculum and understand it well. Then write a HashMap class and its core functions with open addressing as the collision resolution mechanism.
 
